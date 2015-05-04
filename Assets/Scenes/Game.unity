@@ -480,6 +480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5176118cc1a4970933313e2169a4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabProjectile: {fileID: 101640, guid: afb2cde7826024ea589cc2e254a6728d, type: 2}
+  velocityMult: 10
 --- !u!1 &1409798278
 GameObject:
   m_ObjectHideFlags: 0
