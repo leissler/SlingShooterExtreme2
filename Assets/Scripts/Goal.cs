@@ -3,17 +3,34 @@ using System.Collections;
 
 public class Goal : MonoBehaviour {
 
-	// A static field visible from anywhere
-	public static bool goalMet = false;
+	// Static field accessible from anywhere
+	public static bool goalMet;
 
 	void OnTriggerEnter(Collider other) {
-		// Check if the hit comes from a projectile
+		// Check if the object is a projectile
 		if(other.gameObject.tag == "Projectile") {
+			// If so, set goalMet to true
 			goalMet = true;
-			// Set alpha to higher opacity
-			Color c = GetComponent<Renderer>().material.color;
-			c.a = 1.0f;
-			GetComponent<Renderer>().material.color = c;
+
+			// Also set the goals alpha to a higher opacity
+			// (use Renderer component)
+			Color c = this.GetComponent<Renderer>().material.color;
+
+			c.a = 1;
+
+			this.GetComponent<Renderer>().material.color = c;
+
+
 		}
 	}
+
+
+
 }
+
+
+
+
+
+
+
